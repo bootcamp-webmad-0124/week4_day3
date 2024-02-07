@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Spread operator before arrays: removes brackets
+
+        const names = ['ger', 'isa']
+        const namesCopy = [...names]
+
+
+        const drinks1 = ['agua', 'cerve']
+        const drinks2 = ['jagger', 'mosto']
+
+        const allDrinks = [...drinks1, 'coca-cola', ...drinks2, 'fanta', 'kas']
+
+        console.log('Todas las bebidas', allDrinks)
+
+
+
+
+
+
+
+
+        // Spread operator before objects: removes keys 
+
+        const customer = { name: 'Carol', address: 'Garcia Luna, 16' }
+        const cost = { subtotal: 7847, tax: 39 }
+
+        const invoice = {
+            number: 8474,
+            ...customer,
+            ...cost
+        }
+
+        console.log('La facturea completa es:', invoice)
+
+
+
+    </script>
+</body>
+
+</html>

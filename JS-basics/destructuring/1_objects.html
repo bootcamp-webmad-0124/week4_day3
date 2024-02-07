@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // Object destructuring (basic)
+
+        const person = {
+            name: 'Ironhacker',
+            age: 25,
+            favoriteMusic: 'Metal'
+        }
+
+        const { name, age, favoriteMusic } = person
+
+        console.log('Los datos son:', name, age, favoriteMusic)
+
+
+
+
+
+
+
+        // Nominal destructuring
+
+        const mobile = {
+            model: 'Nokia',
+            os: 'Android'
+        }
+
+        const { model, os: system } = mobile
+
+        console.log(`El móvil ${model} viene con ${system}`)
+
+
+
+
+
+
+
+
+        // Nested object destructuring
+
+        const country = {
+            code: 'ESP',
+            specs: {
+                population: 40000000,
+                lang: 'es'
+            }
+        }
+
+        const { code, specs: { population, lang } } = country
+
+        console.log(`En ${code} hay ${population} personas`)
+
+
+
+
+
+
+        // Default values
+
+        const dog = {
+            nick: 'Churrito',
+            color: undefined
+        }
+
+        let { nick, color = 'Marroncito toffe' } = dog
+
+        console.log(`El perro ${nick} es de color ${color}, ¡AW! :3`)
+
+
+
+
+    </script>
+</body>
+
+</html>

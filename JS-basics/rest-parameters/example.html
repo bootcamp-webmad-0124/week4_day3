@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+        // REST parameters: creates a functional array with the spread operator
+        function getMovieInfo(title, director, ...cast) {
+            let text = ''
+            text += `La película ${title} fue dirigida por ${director}.<br>`
+            text += `Los actores fueron:<br>`
+            cast.forEach(actor => text += `- ${actor} <br>`)
+            return text
+        }
+
+
+        const movieDetails = getMovieInfo('Titanic', 'Cameron', 'Leo', 'Kate Winslet', 'La señora mayor de la joya', 'La de los chistes')
+        document.write(movieDetails)
+
+    </script>
+</body>
+
+</html>
